@@ -23,11 +23,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-// TODO: cambia por tu dominio final cuando despliegues en Vercel.
-const siteUrl = "https://glennortega.vercel.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — ${site.role}`,
     template: `%s · ${site.name}`,
@@ -39,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: siteUrl,
+    url: site.url,
     siteName: `${site.name} — ${site.role}`,
     title: `${site.name} — ${site.role}`,
     description: site.seoDescription,

@@ -17,6 +17,8 @@ export type SiteContent = {
   fullName: string;
   role: string;
   email: string;
+  /** Dominio final del sitio (para SEO, Open Graph, sitemap). */
+  url: string;
   /** Meta description para SEO / Open Graph (~155 caracteres). */
   seoDescription: string;
   nav: NavItem[];
@@ -41,6 +43,13 @@ export type SiteContent = {
     title: string;
     items: Capability[];
   };
+  contact: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    availability: string;
+    cta: Cta;
+  };
   socials: SocialLink[];
 };
 
@@ -49,6 +58,8 @@ export const site: SiteContent = {
   fullName: "Ariel Glenn Ortega Castillo",
   role: "Creative Producer",
   email: "glennortegacast@gmail.com",
+  // TODO: cambia por tu dominio final cuando despliegues en Vercel.
+  url: "https://glennortega.vercel.app",
   seoDescription:
     "Creative Producer: sistemas de marca, producción de eventos corporativos y workflows asistidos por AI, con base en producción audiovisual.",
 
@@ -115,6 +126,14 @@ export const site: SiteContent = {
         deliverables: ["Dirección", "Video", "Post & motion"],
       },
     ],
+  },
+
+  contact: {
+    eyebrow: "04 — Contacto",
+    title: "¿Tienes un proyecto en mente?",
+    text: "Cuéntame qué quieres construir —una marca, un evento, un flujo con AI o una pieza audiovisual— y vemos cómo hacerlo realidad.",
+    availability: "Disponible para proyectos y colaboraciones",
+    cta: { label: "Escríbeme", href: "mailto:glennortegacast@gmail.com" },
   },
 
   socials: [
