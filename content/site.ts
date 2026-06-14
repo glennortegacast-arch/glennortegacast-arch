@@ -53,10 +53,10 @@ export const site: SiteContent = {
     "Creative Producer: sistemas de marca, producción de eventos corporativos y workflows asistidos por AI, con base en producción audiovisual.",
 
   nav: [
-    { label: "Sobre mí", href: "#sobre" },
-    { label: "Capacidades", href: "#capacidades" },
-    { label: "Trabajo", href: "#trabajo" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Sobre mí", href: "/#sobre" },
+    { label: "Capacidades", href: "/#capacidades" },
+    { label: "Trabajo", href: "/#trabajo" },
+    { label: "Contacto", href: "/#contacto" },
   ],
 
   hero: {

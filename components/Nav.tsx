@@ -13,7 +13,7 @@ export function Nav() {
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
       >
         <a
-          href="#inicio"
+          href="/#inicio"
           className="font-display text-lg font-semibold tracking-tight text-ink"
         >
           {site.name}
@@ -35,7 +35,7 @@ export function Nav() {
         </ul>
 
         <a
-          href="#contacto"
+          href="/#contacto"
           className="hidden rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ember md:inline-block"
         >
           Hablemos
@@ -92,7 +92,7 @@ export function Nav() {
           ))}
           <li className="pt-2">
             <a
-              href="#contacto"
+              href="/#contacto"
               onClick={() => setOpen(false)}
               className="block rounded-full bg-ink px-4 py-2 text-center text-sm font-medium text-paper transition-colors hover:bg-ember"
             >
