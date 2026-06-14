@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { Reveal } from "@/components/Reveal";
+import { SectionHeading } from "@/components/SectionHeading";
 
 type SectionProps = {
   id: string;
@@ -7,6 +9,7 @@ type SectionProps = {
   children: ReactNode;
 };
 
+/** Sección genérica con encabezado animado. Útil para bloques simples. */
 export function Section({ id, eyebrow, title, children }: SectionProps) {
   return (
     <section
@@ -15,18 +18,10 @@ export function Section({ id, eyebrow, title, children }: SectionProps) {
       className="scroll-mt-24 border-t border-line/60"
     >
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        {eyebrow && (
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember">
-            {eyebrow}
-          </p>
-        )}
-        <h2
-          id={`${id}-title`}
-          className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl"
-        >
-          {title}
-        </h2>
-        <div className="mt-6">{children}</div>
+        <Reveal>
+          <SectionHeading id={id} eyebrow={eyebrow} title={title} />
+          <div className="mt-6">{children}</div>
+        </Reveal>
       </div>
     </section>
   );

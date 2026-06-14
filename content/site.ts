@@ -6,6 +6,11 @@
 export type NavItem = { label: string; href: string };
 export type Cta = { label: string; href: string };
 export type SocialLink = { label: string; href: string; handle?: string };
+export type Capability = {
+  title: string;
+  description: string;
+  deliverables?: string[];
+};
 
 export type SiteContent = {
   name: string;
@@ -23,6 +28,18 @@ export type SiteContent = {
     tags: string[];
     primaryCta: Cta;
     secondaryCta: Cta;
+  };
+  about: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    paragraphs: string[];
+    pillars: string[];
+  };
+  capabilities: {
+    eyebrow: string;
+    title: string;
+    items: Capability[];
   };
   socials: SocialLink[];
 };
@@ -56,6 +73,48 @@ export const site: SiteContent = {
     ],
     primaryCta: { label: "Ver trabajo", href: "#trabajo" },
     secondaryCta: { label: "Hablemos", href: "#contacto" },
+  },
+
+  about: {
+    eyebrow: "01 — Sobre mí",
+    title: "Tres mundos, una sola producción",
+    lead: "Soy Glenn, Creative Producer con base en comunicación y producción audiovisual. Trabajo justo donde se cruzan tres mundos que casi siempre van por separado: la marca, el evento y la AI.",
+    paragraphs: [
+      "Vengo del lenguaje audiovisual —encuadre, ritmo, narrativa— y eso define cómo produzco: cada sistema de marca, cada evento y cada flujo asistido por AI se piensa como una pieza que se ve, se siente y funciona. Conecto el concepto creativo con la ejecución operativa para que nada se pierda entre la idea y la realidad.",
+      "Me obsesiona que lo bonito también sea eficiente. Diseño procesos —muchas veces con AI en el centro— para que equipos y clientes lleguen a resultados memorables sin fricción, a tiempo y con una estética cuidada.",
+    ],
+    pillars: ["Creatividad visual", "Producción & eventos", "AI aplicada"],
+  },
+
+  capabilities: {
+    eyebrow: "02 — Capacidades",
+    title: "Qué hago",
+    items: [
+      {
+        title: "Sistemas de marca",
+        description:
+          "Identidad visual y sistemas escalables que mantienen coherencia en cada punto de contacto, del logo al lenguaje completo.",
+        deliverables: ["Identidad", "Guidelines", "Dirección de arte"],
+      },
+      {
+        title: "Eventos corporativos",
+        description:
+          "Producción integral de eventos temáticos: del concepto creativo y la escenografía a la ejecución impecable en sitio.",
+        deliverables: ["Concepto", "Producción", "Contenido en vivo"],
+      },
+      {
+        title: "Workflows con AI",
+        description:
+          "Diseño de flujos y asistentes con AI que aceleran la producción sin sacrificar criterio ni calidad.",
+        deliverables: ["Pipelines AI", "Asistentes a medida", "Automatización"],
+      },
+      {
+        title: "Producción audiovisual",
+        description:
+          "Dirección y producción de piezas con narrativa y acabado profesional, desde la idea hasta la post.",
+        deliverables: ["Dirección", "Video", "Post & motion"],
+      },
+    ],
   },
 
   socials: [
