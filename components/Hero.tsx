@@ -11,14 +11,20 @@ export function Hero() {
     secondaryCta,
   } = site.hero;
 
+  // Firma "temperatura de color": primer nombre cálido (tungsteno), resto frío (daylight).
+  const words = headline.trim().split(/\s+/);
+  const firstWord = words[0];
+  const restWords = words.slice(1).join(" ");
+
   return (
     <section id="inicio" aria-labelledby="hero-title" className="relative scroll-mt-24">
-      {/* Acento de fondo sutil */}
+      {/* Glow dual: cálido (tungsteno) + frío (daylight) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-ember/10 blur-3xl" />
+        <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-ember/15 blur-3xl" />
+        <div className="absolute -left-40 top-44 h-96 w-96 rounded-full bg-daylight/15 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 pb-20 pt-20 sm:pt-28 md:pb-28 md:pt-36">
@@ -31,10 +37,11 @@ export function Hero() {
 
         <h1
           id="hero-title"
-          className="animate-fade-up mt-5 max-w-4xl text-balance font-display text-5xl font-semibold leading-[1.03] tracking-tight text-ink sm:text-6xl md:text-7xl"
+          className="animate-fade-up mt-5 max-w-4xl text-balance font-display text-5xl font-semibold leading-[1.03] tracking-tight sm:text-6xl md:text-7xl"
           style={{ animationDelay: "60ms" }}
         >
-          {headline}
+          <span className="text-ember">{firstWord}</span>
+          {restWords && <span className="text-daylight"> {restWords}</span>}
         </h1>
 
         <p

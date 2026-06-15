@@ -157,15 +157,15 @@ export default async function ProjectPage({
         </Reveal>
 
         <div className="mt-16 max-w-3xl space-y-14">
-          <Block eyebrow="01 — El problema" title="El reto">
+          <Block eyebrow="El problema" title="El reto">
             {problem}
           </Block>
-          <Block eyebrow="02 — Mi rol" title="Qué hice">
+          <Block eyebrow="Mi rol" title="Qué hice">
             {myRole}
           </Block>
 
           <Reveal>
-            <BlockHeading eyebrow="03 — Proceso" title="Cómo lo abordé" />
+            <BlockHeading eyebrow="Proceso" title="Cómo lo abordé" />
             <ol className="mt-6 space-y-6">
               {process.map((step, i) => (
                 <li key={step.title} className="flex gap-5">
@@ -186,7 +186,7 @@ export default async function ProjectPage({
           </Reveal>
 
           <Reveal>
-            <BlockHeading eyebrow="04 — Resultado" title="El impacto" />
+            <BlockHeading eyebrow="Resultado" title="El impacto" />
             <p className="mt-6 leading-relaxed text-stone">{result}</p>
             {metrics && metrics.length > 0 && (
               <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -211,7 +211,7 @@ export default async function ProjectPage({
         {gallery && gallery.length > 0 && (
           <div className="mt-16">
             <Reveal>
-              <BlockHeading eyebrow="05 — Visuales" title="Galería" />
+              <BlockHeading eyebrow="Visuales" title="Galería" />
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {gallery.map((img, i) => (

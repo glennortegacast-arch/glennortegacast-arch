@@ -15,7 +15,7 @@ export function Work() {
         <Reveal>
           <SectionHeading
             id="trabajo"
-            eyebrow="03 — Trabajo seleccionado"
+            eyebrow="Selección"
             title="Trabajo seleccionado"
           />
         </Reveal>

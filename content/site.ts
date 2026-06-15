@@ -10,6 +10,8 @@ export type Capability = {
   title: string;
   description: string;
   deliverables?: string[];
+  /** Temperatura de la disciplina: "warm" (creativo) o "cool" (AI/técnico). */
+  accent?: "warm" | "cool";
 };
 
 export type SiteContent = {
@@ -87,7 +89,7 @@ export const site: SiteContent = {
   },
 
   about: {
-    eyebrow: "01 — Sobre mí",
+    eyebrow: "Sobre mí",
     title: "Tres mundos, una sola producción",
     lead: "Soy Glenn, Creative Producer con base en comunicación y producción audiovisual. Trabajo justo donde se cruzan tres mundos que casi siempre van por separado: la marca, el evento y la AI.",
     paragraphs: [
@@ -98,7 +100,7 @@ export const site: SiteContent = {
   },
 
   capabilities: {
-    eyebrow: "02 — Capacidades",
+    eyebrow: "Capacidades",
     title: "Qué hago",
     items: [
       {
@@ -106,30 +108,34 @@ export const site: SiteContent = {
         description:
           "Identidad visual y sistemas escalables que mantienen coherencia en cada punto de contacto, del logo al lenguaje completo.",
         deliverables: ["Identidad", "Guidelines", "Dirección de arte"],
+        accent: "warm",
       },
       {
         title: "Eventos corporativos",
         description:
           "Producción integral de eventos temáticos: del concepto creativo y la escenografía a la ejecución impecable en sitio.",
         deliverables: ["Concepto", "Producción", "Contenido en vivo"],
+        accent: "warm",
       },
       {
         title: "Workflows con AI",
         description:
           "Diseño de flujos y asistentes con AI que aceleran la producción sin sacrificar criterio ni calidad.",
         deliverables: ["Pipelines AI", "Asistentes a medida", "Automatización"],
+        accent: "cool",
       },
       {
         title: "Producción audiovisual",
         description:
           "Dirección y producción de piezas con narrativa y acabado profesional, desde la idea hasta la post.",
         deliverables: ["Dirección", "Video", "Post & motion"],
+        accent: "warm",
       },
     ],
   },
 
   contact: {
-    eyebrow: "04 — Contacto",
+    eyebrow: "Contacto",
     title: "¿Tienes un proyecto en mente?",
     text: "Cuéntame qué quieres construir —una marca, un evento, un flujo con AI o una pieza audiovisual— y vemos cómo hacerlo realidad.",
     availability: "Disponible para proyectos y colaboraciones",

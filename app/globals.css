@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* ---- Paleta: "Studio Paper" (editorial, cálida, un solo acento) ---- */
-  --color-paper: #f7f4ef; /* fondo */
-  --color-cloud: #fbfaf6; /* superficie sutil / cards */
-  --color-ink: #1a1814; /* texto principal */
-  --color-stone: #6b6157; /* texto secundario */
-  --color-line: #e5dfd4; /* bordes / divisores */
-  --color-ember: #c2502e; /* acento */
-  --color-ember-600: #a8421f; /* acento (hover) */
-  --color-slate: #2e4756; /* secundario frío — guiño AI, uso moderado */
+  /* ---- Paleta: "Temperatura de color" (duotono tungsteno / daylight) ---- */
+  --color-paper: #ecede9; /* base film-stock (fría) */
+  --color-cloud: #f2f3ef; /* superficie sutil / cards */
+  --color-ink: #181a1d; /* texto principal (casi negro frío) */
+  --color-stone: #5c6064; /* texto secundario */
+  --color-line: #dcddd9; /* bordes / divisores */
+  --color-ember: #9c560f; /* Tungsteno ~3200K — acento cálido (creativo) */
+  --color-ember-600: #854809; /* tungsteno (hover) */
+  --color-daylight: #2a6285; /* Daylight ~5600K — acento frío (AI/técnico) */
+  --color-daylight-600: #21506d; /* daylight (hover) */
+  --color-slate: #2e4756; /* (legacy, sin uso) */
 
   /* ---- Tipografía (variables inyectadas por next/font en <html>) ---- */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,

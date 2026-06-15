@@ -6,6 +6,9 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
+  const [first, ...rest] = site.name.trim().split(/\s+/);
+  const last = rest.join(" ");
+
   return new ImageResponse(
     (
       <div
@@ -15,9 +18,9 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#f7f4ef",
+          backgroundColor: "#ecede9",
           padding: 80,
-          color: "#1a1814",
+          color: "#181a1d",
         }}
       >
         <div
@@ -33,43 +36,48 @@ export default function OpengraphImage() {
               fontSize: 26,
               letterSpacing: 4,
               textTransform: "uppercase",
-              color: "#c2502e",
+              color: "#9c560f",
             }}
           >
             Creative Producer
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              fontSize: 26,
-              color: "#6b6157",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <div
               style={{
                 display: "flex",
                 width: 14,
                 height: 14,
                 borderRadius: 999,
-                backgroundColor: "#c2502e",
+                backgroundColor: "#9c560f",
               }}
             />
-            {site.name}
+            <div
+              style={{
+                display: "flex",
+                width: 14,
+                height: 14,
+                borderRadius: 999,
+                backgroundColor: "#2a6285",
+              }}
+            />
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <div style={{ display: "flex", fontSize: 104, fontWeight: 700, lineHeight: 1 }}>
-            {site.name}
+          <div style={{ display: "flex", fontSize: 108, fontWeight: 700, lineHeight: 1 }}>
+            <div style={{ display: "flex", color: "#9c560f" }}>{first}</div>
+            {last && (
+              <div style={{ display: "flex", color: "#2a6285", marginLeft: 26 }}>
+                {last}
+              </div>
+            )}
           </div>
           <div
             style={{
               display: "flex",
               fontSize: 34,
               lineHeight: 1.3,
-              color: "#6b6157",
+              color: "#5c6064",
               maxWidth: 920,
             }}
           >
@@ -77,7 +85,7 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        <div style={{ display: "flex", fontSize: 24, color: "#6b6157", letterSpacing: 1 }}>
+        <div style={{ display: "flex", fontSize: 24, color: "#5c6064", letterSpacing: 1 }}>
           Marca · Eventos corporativos · Workflows con AI · Audiovisual
         </div>
       </div>
